@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "outputPath": "dist/portfolio-angular-2025",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -26,7 +27,7 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss"], 
+            "styles": ["src/styles.scss"],
             "scripts": ["bootstrap/dist/js/bootstrap.min.js"]
           },
           "configurations": {
@@ -53,6 +54,7 @@
           },
           "defaultConfiguration": "production"
         },
+
         "serve": {
           "builder": "@angular/build:dev-server",
           "configurations": {
@@ -65,9 +67,21 @@
           },
           "defaultConfiguration": "development"
         },
+
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "/Portfolio_angular/",
+            "repo": "https://github.com/LeandroJader/Portfolio_angular.git",
+            "name": "Leandro Jader",
+            "email": "leandronunesramosln@gmail.com"
+          }
+        },
+
         "extract-i18n": {
           "builder": "@angular/build:extract-i18n"
         },
+
         "test": {
           "builder": "@angular/build:karma",
           "options": {

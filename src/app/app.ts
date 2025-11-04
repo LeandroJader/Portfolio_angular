@@ -1,28 +1,36 @@
-import { Component } from '@angular/core';
+import { Component, } from '@angular/core';
 
-interface ItemHabilidade {
-  icone: string;
-  titulo : string;
-  descricao?:string
+interface IconeHabilidade{
+  imagem : string;
+  titulo : string
 }
- interface ItemPortfolio {
-  titulo :string
-  descricao :string
-  urlImagem :string
-  urlGif :string
-  urlRepositorio :string
-  stack :string[];
- }
+interface ItemHabilidade{
+  
+  icone: string;
+  titulo: string;
+  descricao?: string;
+
+}
+interface ItemPortfolio {
+  titulo: string;
+  descricao: string;
+  urlImagem: string;
+  urlGif: string;
+  urlRepositorio: string;
+  stack: string[];
+}
 
 @Component({
   selector: 'app-root',
   imports: [],
   templateUrl: './app.html',
 })
+
+
 export class App {
-    
-  public itensHabilidades: ItemHabilidade[] = [
-     {
+  
+public itensHabilidades: ItemHabilidade[] = [
+    {
       icone: 'bi-window-fullscreen',
       titulo: 'Web Design',
       descricao: `Design e desenvolvimento de sistemas web atraentes e responsivos.`,
@@ -53,33 +61,35 @@ export class App {
       descricao: `Implantação e manutenção de sistemas em servidores VPS e em nuvem.`,
     },
   ];
-  public itensHabilidades2:ItemHabilidade[] = [
+
+
+  public iconesHabilidade :IconeHabilidade[] = [
  {
-     icone: 'https://skillicons.dev/icons?i=html&theme=dark',
+      imagem: 'https://skillicons.dev/icons?i=html&theme=dark',
       titulo: 'HTML',
     },
     {
-      icone: 'https://skillicons.dev/icons?i=css&theme=dark',
+       imagem: 'https://skillicons.dev/icons?i=css&theme=dark',
       titulo: 'CSS',
     },
     {
-      icone: 'https://skillicons.dev/icons?i=scss&theme=dark',
+       imagem: 'https://skillicons.dev/icons?i=scss&theme=dark',
       titulo: 'SCSS',
     },
     {
-      icone: 'https://skillicons.dev/icons?i=js&theme=dark',
+       imagem: 'https://skillicons.dev/icons?i=js&theme=dark',
       titulo: 'JavaScript',
     },
     {
-      icone: 'https://skillicons.dev/icons?i=ts&theme=dark',
+       imagem: 'https://skillicons.dev/icons?i=ts&theme=dark',
       titulo: 'TypeScript',
     },
     {
-      icone: 'https://skillicons.dev/icons?i=bootstrap&theme=dark',
+       imagem: 'https://skillicons.dev/icons?i=bootstrap&theme=dark',
       titulo: 'Bootstrap',
     },
     {
-      icone: 'https://skillicons.dev/icons?i=angular&theme=dark',
+       imagem: 'https://skillicons.dev/icons?i=angular&theme=dark',
       titulo: 'Angular',
     },
    /* {
@@ -87,23 +97,23 @@ export class App {
       titulo: 'RxJS',
     },*/
     {
-      icone: 'https://skillicons.dev/icons?i=net&theme=dark',
+       imagem: 'https://skillicons.dev/icons?i=net&theme=dark',
       titulo: '.NET',
     },
     {
-      icone: 'https://skillicons.dev/icons?i=cs&theme=dark',
+       imagem: 'https://skillicons.dev/icons?i=cs&theme=dark',
       titulo: 'C#',
     },
     {
-      icone: 'https://skillicons.dev/icons?i=selenium&theme=dark',
+       imagem: 'https://skillicons.dev/icons?i=selenium&theme=dark',
       titulo: 'Selenium',
     },
     {
-      icone: 'https://skillicons.dev/icons?i=cypress&theme=dark',
+       imagem: 'https://skillicons.dev/icons?i=cypress&theme=dark',
       titulo: 'Cypress',
     },
     {
-      icone: 'https://skillicons.dev/icons?i=sqlite&theme=dark',
+       imagem: 'https://skillicons.dev/icons?i=sqlite&theme=dark',
       titulo: 'SQLite',
     },
     /*{
@@ -116,37 +126,38 @@ export class App {
       titulo: 'Redis',
     },*/
     {
-      icone: 'https://skillicons.dev/icons?i=docker&theme=dark',
+       imagem: 'https://skillicons.dev/icons?i=docker&theme=dark',
       titulo: 'Docker',
     },
     {
-      icone: 'https://skillicons.dev/icons?i=powershell&theme=dark',
+       imagem: 'https://skillicons.dev/icons?i=powershell&theme=dark',
       titulo: 'PowerShell',
     },
     {
-      icone: 'https://skillicons.dev/icons?i=git&theme=dark',
+       imagem: 'https://skillicons.dev/icons?i=git&theme=dark',
       titulo: 'Git',
     },
     {
-      icone: 'https://skillicons.dev/icons?i=github&theme=dark',
+       imagem: 'https://skillicons.dev/icons?i=github&theme=dark',
       titulo: 'GitHub',
     },
     {
-      icone: 'https://skillicons.dev/icons?i=azure&theme=dark',
+       imagem: 'https://skillicons.dev/icons?i=azure&theme=dark',
       titulo: 'Azure',
     },
     {
-      icone: 'https://skillicons.dev/icons?i=visualstudio&theme=dark',
+       imagem: 'https://skillicons.dev/icons?i=visualstudio&theme=dark',
       titulo: 'Visual Studio',
     },
     {
-      icone: 'https://skillicons.dev/icons?i=vscode&theme=dark',
+       imagem: 'https://skillicons.dev/icons?i=vscode&theme=dark',
       titulo: 'VSCode',
  }
   ]
-public itensPortfolio : ItemPortfolio[] =[
-{
-    titulo: 'Controle de Medicamentos',
+
+public itensPortfolio: ItemPortfolio[] = [
+    {
+      titulo: 'Controle de Medicamentos',
       urlImagem: 'controle-de-medicamentos.png',
       urlGif: '',
       urlRepositorio:
@@ -159,7 +170,7 @@ public itensPortfolio : ItemPortfolio[] =[
       ],
       descricao: `O sistema de Controle de Medicamentos apresenta o conceito de gerenciamento de um posto de saúde, com o controle de fornecimento, estoque, funcionários, pacientes e retirada de prescrições — com foco na rastreabilidade das movimentações de estoque.`,
     },
-     {
+    {
       titulo: 'Gestão de Equipamentos',
       urlImagem: 'gestao-de-equipamentos.png',
       urlGif: '',
@@ -174,7 +185,9 @@ public itensPortfolio : ItemPortfolio[] =[
       descricao: `O sistema de Gestão de Equipamentos controla o estoque de um almoxarifado, com a gestão de equipamentos e o registro de chamados de manutenção que eventualmente ocorrem durante o uso dos equipamentos. Também são inclusas informações sobre os fabricantes dos equipamentos para contato de suporte ou compras.`,
     },
   ];
-  public itemPortfolioSelecionado?: ItemPortfolio;
+
+
+ public itemPortfolioSelecionado?: ItemPortfolio;
 }
 
 

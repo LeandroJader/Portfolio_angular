@@ -48,22 +48,22 @@ export class IconesHabilidades {
        imagem: 'https://skillicons.dev/icons?i=cs&theme=dark',
       titulo: 'C#',
     },
-    {
-       imagem: 'https://skillicons.dev/icons?i=selenium&theme=dark',
-      titulo: 'Selenium',
-    },
-    {
-       imagem: 'https://skillicons.dev/icons?i=cypress&theme=dark',
-      titulo: 'Cypress',
-    },
+    // {
+    //    imagem: 'https://skillicons.dev/icons?i=selenium&theme=dark',
+    //   titulo: 'Selenium',
+    // },
+    // {
+    //    imagem: 'https://skillicons.dev/icons?i=cypress&theme=dark',
+    //   titulo: 'Cypress',
+    // },
     {
        imagem: 'https://skillicons.dev/icons?i=sqlite&theme=dark',
       titulo: 'SQLite',
     },
-    /*{
-      icone: 'https://skillicons.dev/icons?i=postgres&theme=dark',
+    {
+      imagem: 'https://skillicons.dev/icons?i=postgres&theme=dark',
       titulo: 'Postgres',
-    },*/
+    },
 
     /*{
       icone: 'https://skillicons.dev/icons?i=redis&theme=dark',
